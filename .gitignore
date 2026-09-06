@@ -4,7 +4,7 @@ Code/*
 dconf/*
 gh/*
 google-chrome/*
-gtk-3.0/*
+gtk-*/
 htop/*
 librewolf/*
 microsoft-edge/*
@@ -14,3 +14,7 @@ systemd/*
 vivaldi/*
 user-dirs.dirs
 user-dirs.locale
+WebCord/
+xsettingsd/
+lazydocker/
+nwg-look/
