@@ -1,3 +1,7 @@
+-- have you done any configs and want to reload them instantly? use the command
+-- hyprctl reload
+-- to do so
+
 require("HyprlandModules.monitors")
 require("HyprlandModules.autostart")
 require("HyprlandModules.env")
