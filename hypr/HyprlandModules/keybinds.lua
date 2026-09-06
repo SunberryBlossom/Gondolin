@@ -1,5 +1,5 @@
 local terminal    = "kitty"
-local fileManager = "dolphin"
+local fileManager = "kitty yazi"
 local menu        = "fuzzel"
 local mainMod = "SUPER"
 
@@ -54,3 +54,16 @@ hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tr
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
 
+-- screenshots (print to be able to annotate it, shift+print to just get a direct copy)
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f - --copy-command wl-copy -o "~/Pictures/Screenshots/%Y%m%d_%H%M%S.png"'))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
+
+-- screen recordings (SUPER + print for screen recording with sound, SUPER + SHIFT + Print for silent recordings)
+hl.bind("SUPER + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" --audio -f ~/Videos/ScreenRecordings/myRecording.mp4'))
+hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" -f ~/Videos/ScreenRecordings/myRecording.mp4'))
+
+-- pick a color using hyprpicker!
+hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --notify "))
+
+-- look at your clipboard history with cliphist through fuzzel
+hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
