@@ -1,0 +1,18 @@
+{
+  "add books dialog dir": "/home/sunberry/Books",
+  "add books dialog dir-last-used-filter-spec-all-files": false,
+  "database location dialog": "/home/sunberry/Books/Calibre",
+  "recursive book import root dir dialog": "/home/sunberry/Books",
+  "sort_history": [
+    [
+      "timestamp",
+      false
+    ],
+    [
+      "timestamp",
+      false
+    ]
+  ],
+  "welcome_wizard_device": "kindle_pw",
+  "welcome_wizard_was_run": true
+}

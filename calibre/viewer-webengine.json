@@ -1,0 +1,83 @@
+{
+  "bookmarks_sort": "pos",
+  "delete-bookmark-from-viewer_again": false,
+  "geometry-of-main_window_geometry": {
+    "frame_geometry": {
+      "height": 726,
+      "width": 1236,
+      "x": 0,
+      "y": 0
+    },
+    "full_screened": false,
+    "geometry": {
+      "height": 726,
+      "width": 1236,
+      "x": 0,
+      "y": 0
+    },
+    "maximized": true,
+    "normal_geometry": {
+      "height": 726,
+      "width": 611,
+      "x": 0,
+      "y": 0
+    },
+    "qt": {
+      "__class__": "bytearray",
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABNMAAALVAAAAAAAAAAAAAAJiAAAC1QAAAAACAAAABQAAAAAAAAAAAAAABNMAAALV"
+    },
+    "screen": {
+      "depth": 32,
+      "device_pixel_ratio": 2.0,
+      "geometry_in_logical_pixels": {
+        "height": 800,
+        "width": 1280,
+        "x": 0,
+        "y": 0
+      },
+      "index_in_screens_list": 0,
+      "manufacturer": "California Institute of Technology",
+      "model": "0x1404",
+      "name": "eDP-1",
+      "serial": "",
+      "size_in_logical_pixels": {
+        "height": 800,
+        "width": 1280
+      },
+      "virtual_geometry": {
+        "height": 800,
+        "width": 1280,
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "main_window_state": {
+    "__class__": "bytearray",
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAmgD///8AAAABAAABAAAAAtb8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAChAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawEAAAAAAAAC1gAAAPIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAFAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANcA////AAADzgAAAtYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+  },
+  "old_prefs_migrated": true,
+  "session_data": {
+    "base_font_size": 24,
+    "controls_help_shown_count": 2,
+    "current_color_scheme": "sepia-light",
+    "standalone_font_settings": {},
+    "standalone_misc_settings": {
+      "remember_last_read": true,
+      "remember_window_geometry": false,
+      "save_annotations_in_ebook": true,
+      "singleinstance": false
+    },
+    "standalone_recently_opened": [
+      {
+        "authors": [
+          "Mark Price"
+        ],
+        "key": "/home/sunberry/Books/Calibre/Mark Price/C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals_Tenth Edition (2)/C# 14 and .NET 10 - Modern Cross-Platform - Mark Price.epub",
+        "pathtoebook": "/home/sunberry/Books/Calibre/Mark Price/C# 14 and .NET 10 - Modern Cross-Platform Development Fundamentals_Tenth Edition (2)/C# 14 and .NET 10 - Modern Cross-Platform - Mark Price.epub",
+        "timestamp": "2026-09-10T08:33:21.480Z",
+        "title": "C# 14 and .NET 10 – Modern Cross-Platform Development Fundamentals_Tenth Edition"
+      }
+    ]
+  }
+}
