@@ -1,7 +1,13 @@
 {
-  "add books dialog dir": "/home/sunberry/Books",
+  "add books dialog dir": "/home/sunberry/Downloads",
   "add books dialog dir-last-used-filter-spec-all-files": false,
   "database location dialog": "/home/sunberry/Books/Calibre",
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "9.15"
+    ]
+  },
   "recursive book import root dir dialog": "/home/sunberry/Books",
   "sort_history": [
     [

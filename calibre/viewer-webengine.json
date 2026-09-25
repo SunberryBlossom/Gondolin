@@ -17,14 +17,14 @@
     },
     "maximized": true,
     "normal_geometry": {
-      "height": 726,
-      "width": 611,
-      "x": 0,
+      "height": 496,
+      "width": 931,
+      "x": 1280,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABNMAAALVAAAAAAAAAAAAAAJiAAAC1QAAAAACAAAABQAAAAAAAAAAAAAABNMAAALV"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAABNMAAALVAAAFAAAAAAAAAAiiAAAB7wAAAAACAAAABQAAAAAAAAAAAAAABNMAAALV"
     },
     "screen": {
       "depth": 32,
@@ -45,8 +45,8 @@
         "width": 1280
       },
       "virtual_geometry": {
-        "height": 800,
-        "width": 1280,
+        "height": 1080,
+        "width": 3200,
         "x": 0,
         "y": 0
       }
@@ -54,7 +54,7 @@
   },
   "main_window_state": {
     "__class__": "bytearray",
-    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAAAAAAAAPwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawAAAAAA/////wAAAIoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAmgD///8AAAABAAABAAAAAtb8AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAChAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawEAAAAAAAAC1gAAAPIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAFAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANcA////AAADzgAAAtYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
+    "__value__": "AAAA/wAAAAH9AAAAAgAAAAAAAAEAAAAC1vwCAAAAAvsAAAAQAHQAbwBjAC0AZABvAGMAawEAAAAAAAAC1gAAAIoA////+wAAABYAcwBlAGEAcgBjAGgALQBkAG8AYwBrAAAAAAD/////AAAAmgD///8AAAABAAAA/QAAA+78AgAAAAT7AAAAFgBsAG8AbwBrAHUAcAAtAGQAbwBjAGsAAAAAAP////8AAAChAP////sAAAAcAGIAbwBvAGsAbQBhAHIAawBzAC0AZABvAGMAawgAAAAAAAAD7gAAAPIA////+wAAABwAaQBuAHMAcABlAGMAdABvAHIALQBkAG8AYwBrAAAAAAD/////AAAAFAD////7AAAAHgBoAGkAZwBoAGwAaQBnAGgAdABzAC0AZABvAGMAawAAAAAA/////wAAANcA////AAADzgAAAtYAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAAAAAAAAQAAAB4AYQBjAHQAaQBvAG4AcwBfAHQAbwBvAGwAYgBhAHICAAAAAP////8AAAAAAAAAAA=="
   },
   "old_prefs_migrated": true,
   "session_data": {
@@ -69,6 +69,15 @@
       "singleinstance": false
     },
     "standalone_recently_opened": [
+      {
+        "authors": [
+          "Mark J. Price"
+        ],
+        "key": "/home/sunberry/Books/Calibre/Mark J. Price/Apps and Services with .NET 10 (7)/Apps and Services with .NET 10 - Mark J. Price.epub",
+        "pathtoebook": "/home/sunberry/Books/Calibre/Mark J. Price/Apps and Services with .NET 10 (7)/Apps and Services with .NET 10 - Mark J. Price.epub",
+        "timestamp": "2026-09-24T13:40:14.727Z",
+        "title": "Apps and Services with .NET 10"
+      },
       {
         "authors": [
           "Mark Price"
