@@ -9,6 +9,7 @@ require("HyprlandModules.rice")
 require("HyprlandModules.inputAndGestures")
 require("HyprlandModules.keybinds")
 require("HyprlandModules.windowsAndWorkspaces")
+require("HyprlandModules.groups")
 
 -- Feel free to copy and use at your own discretion, according to the GPL
 -- // Sun
