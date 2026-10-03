@@ -1,9 +1,9 @@
 hl.config({
     input = {
         kb_layout  = "us,se",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "grp:alt_shift_toggle",
+        kb_variant = "altgr-intl",
+        kb_model   = "pc86",
+        kb_options = "grp:alt_caps_toggle",
         kb_rules   = "",
 
         follow_mouse = 1,
