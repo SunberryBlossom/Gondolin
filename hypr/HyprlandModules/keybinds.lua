@@ -29,6 +29,19 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
+hl.bind("ALT + R", hl.dsp.submap("resize"))
+
+hl.define_submap("resize", function()
+
+    hl.bind("right", hl.dsp.window.resize({ x = 20, y = 0, relative = true}), { repeating = true })
+    hl.bind("left", hl.dsp.window.resize({ x = -20, y = 0, relative = true}), { repeating = true })
+    hl.bind("up", hl.dsp.window.resize({ x = 0, y = 20, relative = true}), { repeating = true })
+    hl.bind("down", hl.dsp.window.resize({ x = 0, y = -20, relative = true}), { repeating = true })
+
+    hl.bind("escape", hl.dsp.submap("reset"))
+
+end)
+
 
 -- window navigation
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
