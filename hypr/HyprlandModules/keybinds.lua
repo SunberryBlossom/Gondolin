@@ -69,7 +69,7 @@ end
 
 
 -- kill commands
-hl.bind(mainMod .. " + C", hl.dsp.window.kill())
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 
