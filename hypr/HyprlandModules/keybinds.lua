@@ -1,3 +1,6 @@
+-- when adding new, more complicated binds, refer to https://wiki.hypr.land/Configuring/Basics/Binds/
+
+
 -- variables
 local terminal        = "kitty"
 local fileManager     = "kitty yazi"
@@ -8,6 +11,7 @@ local lockScreen      = "hyprlock"
 local passwordManager = "proton-pass"
 local mailClient = "proton-mail"
 
+
 -- app hotkeys
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
@@ -16,6 +20,7 @@ hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(mainBrowser))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(passwordManager))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(mailClient))
+
 
 -- window management
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -51,6 +56,7 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+
 -- workspace navigation
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -60,6 +66,7 @@ for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 end
+
 
 -- kill commands
 hl.bind(mainMod .. " + C", hl.dsp.window.kill())
@@ -81,8 +88,8 @@ hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 
 -- screen recordings (SUPER + print for screen recording with sound, SUPER + SHIFT + Print for silent recordings)
-hl.bind("SUPER + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" --audio -f ~/Videos/ScreenRecordings/myRecording.mp4'))
-hl.bind("SUPER + SHIFT + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" -f ~/Videos/ScreenRecordings/myRecording.mp4'))
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" --audio -f ~/Videos/ScreenRecordings/myRecording.mp4'))
+hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" -f ~/Videos/ScreenRecordings/myRecording.mp4'))
 
 
 -- pick a color using hyprpicker!
@@ -90,4 +97,4 @@ hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --no
 
 
 -- look at your clipboard history with cliphist through fuzzel
-hl.bind("SUPER + SHIFT + V", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
