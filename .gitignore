@@ -3,20 +3,20 @@ mozilla/
 Proton Mail/
 Signal/
 gurk/
-BraveSoftware/*
-chromium/*
-Code/*
-dconf/*
-gh/*
-google-chrome/*
+BraveSoftware/
+chromium/
+Code/
+dconf/
+gh/
+google-chrome/
 gtk-*/
-htop/*
-librewolf/*
-microsoft-edge/*
-Proton Pass/*
-pulse/*
-systemd/*
-vivaldi/*
+htop/
+librewolf/
+microsoft-edge/
+Proton Pass/
+pulse/
+systemd/
+vivaldi/
 user-dirs.dirs
 user-dirs.locale
 WebCord/
@@ -26,3 +26,6 @@ nwg-look/
 heroic/
 ModrinthApp/
 calibre/
+QtProject.conf
+Proton/
+menus/
