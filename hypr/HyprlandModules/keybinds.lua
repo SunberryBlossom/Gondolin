@@ -6,6 +6,7 @@ local mainMod         = "SUPER"
 local mainBrowser     = "librewolf"
 local lockScreen      = "hyprlock"
 local passwordManager = "proton-pass"
+local mailClient = "proton-mail"
 
 -- app hotkeys
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
@@ -14,6 +15,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(appMenu))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd(lockScreen))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(mainBrowser))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(passwordManager))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(mailClient))
 
 -- window management
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -61,7 +63,7 @@ end
 
 -- kill commands
 hl.bind(mainMod .. " + C", hl.dsp.window.kill())
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 
 -- Laptop multimedia keys for volume and LCD brightness
