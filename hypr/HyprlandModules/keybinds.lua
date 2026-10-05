@@ -87,11 +87,6 @@ hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f - --copy-comma
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 
--- screen recordings (SUPER + print for screen recording with sound, SUPER + SHIFT + Print for silent recordings)
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" --audio -f ~/Videos/ScreenRecordings/myRecording.mp4'))
-hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd('wf-recorder -g "$(slurp)" -f ~/Videos/ScreenRecordings/myRecording.mp4'))
-
-
 -- pick a color using hyprpicker!
 hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --notify "))
 

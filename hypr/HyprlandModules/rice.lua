@@ -103,7 +103,7 @@ hl.config({
             splash = "rgb(ffffff)"
         },
 
-        close_special_on_empty = false,
+        close_special_on_empty = true,
 
         initial_workspace_tracking = 2,
 
