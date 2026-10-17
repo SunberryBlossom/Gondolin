@@ -23,6 +23,8 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(mailClient))
 
 
 -- window management
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle", mode = 1}))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle", mode = 0}))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
