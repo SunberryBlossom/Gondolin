@@ -29,3 +29,8 @@ calibre/
 QtProject.conf
 Proton/
 menus/
+easyeffects/
+mpd/
+obs-studio/
+rmpc/
+sqlitebrowser/
