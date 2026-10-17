@@ -56,6 +56,15 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+-- window grouping keybinds
+hl.bind(mainMod .. " + G", hl.dsp.group.toggle())
+hl.bind(mainMod .. " + CTRL + G ", hl.dsp.group.lock({ action = "toggle"}))
+
+for i = 1, 10 do
+    local key = i % 10
+     hl.bind(mainMod .. " + ALT + " .. key, hl.dsp.group.active({ index = i }))
+end
+
 
 -- workspace navigation
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("magic"))
