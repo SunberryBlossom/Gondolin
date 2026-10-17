@@ -38,3 +38,18 @@ hl.window_rule({
     move  = "20 monitor_h-120",
     float = true,
 })
+
+-- rule for screensharing a window on Discord
+hl.window_rule({
+    name = "xwayland-video-bridge-fixes",
+    match = {
+        class = "xwaylandvideobridge"
+    },
+
+    no_initial_focus = true,
+    no_focus = true,
+    no_anim = true,
+    no_blur = true,
+    max_size = {1,1},
+    opacity = 0.0
+})
