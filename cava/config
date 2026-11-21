@@ -5,6 +5,8 @@
 
 [general]
 
+live-config = 0
+
 # Auto reload config if the configuration file has changed. 1 = on, 0 = off.
 ; live-config = 0
 

@@ -99,7 +99,7 @@ hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 
 -- pick a color using hyprpicker!
-hl.bind("CTRL + Print", hl.dsp.exec_cmd("hyprpicker --autocopy --format=hex --notify "))
+hl.bind("CTRL + P", hl.dsp.exec_cmd("hyprpicker --autocopy --format=rgb --notify "))
 
 
 -- look at your clipboard history with cliphist through fuzzel
