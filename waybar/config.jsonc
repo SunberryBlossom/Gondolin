@@ -17,12 +17,12 @@
         "mpd"
     ],
     "modules-right": [
-        "power-profiles-daemon",
         "cpu",
         "backlight",
         "battery",
-        "idle_inhibitor",
         "tray",
+        "power-profiles-daemon",
+        "idle_inhibitor",
         "clock"
     ],
 
