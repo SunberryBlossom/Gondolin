@@ -1,55 +1,75 @@
 // -*- mode: jsonc -*-
 {
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 10, // Gaps between modules (4px)
-    // Choose the order of the modules
+    // bar positioning
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 10,
+    "margin-top": 10,
+    "margin-left": 10,
+    "margin-right": 10,
+
+    // module group positioning
     "modules-left": [
-        "hyprland/workspaces",
-        "hyprland/mode",
-        "hyprland/scratchpad",
-        "custom/media"
+        "hyprland/workspaces"
     ],
     "modules-center": [
-        "hyprland/window"
+        "mpd"
     ],
     "modules-right": [
-        // "mpd",
-        "idle_inhibitor",
-        // "pulseaudio",
-        "network",
         "power-profiles-daemon",
         "cpu",
-        // "memory",
-        "temperature",
         "backlight",
-        "keyboard-state",
-        "hyprland/language",
         "battery",
-        "battery#bat2",
-        "clock",
+        "idle_inhibitor",
         "tray",
-        "custom/power"
+        "clock"
     ],
-   // Modules configuration
+
+
     "hyprland/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": true,
-        "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+
+        // [FORMATTING]
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "6": "",
+            "7": "",
+            "8": "",
+            "9": "",
+            "10": "",
+            "active": ""
+        },
+
+        // [SORTING]
+        // if both name and coords are true, name trumps coords
+        // if both name and coords are false, it will be sorted by ID
+        "sort-by-name": false, // key in format-icons object
+        "sort-by-coordinates": false,
+        "sort-by-id": true, // assigned by compositor
+
+        // [FILTERING]
+        // true = show all workspaces, even those not on screen, as long as they have a window opened currently.
+        // false = only show workspaces currently viewed on a screen.
+        "all-outputs": true, // workspace groups
+        "active-only": false, // singular workspaces
+        "ignore-hidden": true,
+
+        // [SCROLL BEHAVIOR]
+        "disable-scroll": true,
+        "enable-bar-scroll": false,
+
+        // [CLICK BEHAVIOR]
+        // Currently kinda buggy: no matter the given input, all clicks will use the action ACTIVATE...
+        "on-click": "activate",
+        "on-middle-click": "deactivate",
+        "on-right-click": "close"
     },
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -59,9 +79,13 @@
             "unlocked": ""
         }
     },
+
+
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
+
+
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -69,8 +93,10 @@
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
+
+
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
@@ -98,10 +124,12 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
+
+
     "tray": {
         // "icon-size": 21,
         "spacing": 10,
@@ -110,18 +138,26 @@
         //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
         // }
     },
+
+
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
+
+
     "cpu": {
         "format": "{usage}% ",
         "tooltip": false
     },
+
+
     "memory": {
         "format": "{}% "
     },
+
+
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
@@ -130,11 +166,15 @@
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
+
+
     "backlight": {
         // "device": "acpi_video1",
         "format": "{percent}% {icon}",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
+
+
     "battery": {
         "states": {
           //  "good": 95,
@@ -150,9 +190,13 @@
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
+
+
     "battery#bat2": {
         "bat": "BAT2"
     },
+
+
     "power-profiles-daemon": {
       "format": "{icon}",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
@@ -160,10 +204,12 @@
       "format-icons": {
         "default": "",
         "performance": "",
-        "balanced": "",
+        "balanced": " ",
         "power-saver": ""
       }
     },
+
+
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -173,6 +219,8 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+
+
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon} {format_source}",
@@ -192,6 +240,8 @@
         },
         "on-click": "pavucontrol"
     },
+
+
     "custom/media": {
         "format": "{icon} {text}",
         "return-type": "json",
@@ -204,6 +254,8 @@
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
+
+
     "custom/power": {
         "format" : "⏻ ",
 		"tooltip": false,
