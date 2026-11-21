@@ -15,9 +15,9 @@ window#waybar {
 .modules-center {} */
 
 .modules-right {
-    border: 1px solid rgba(213, 182, 98, 0.9);
+    border: 1px solid rgba(213, 182, 98, 1);
     border-radius: 7px;
-    background: rgba(0, 86, 0, 0.65);
+    background: rgba(0, 86, 0, 1);
 }
 
 #cavaGLSL,
@@ -45,7 +45,7 @@ window#waybar {
 }
 
 #mpd {
-        background: rgba(0, 86, 0, 0.65);
+        background: rgba(0, 86, 0, 1);
 }
 
 /* needed button settings to remove weird hover on workspace buttons */
@@ -58,9 +58,9 @@ button:hover {
 
 /* [WORKSPACES MODULE] */
 #workspaces {
-    border: 1px solid rgba(213, 182, 98, 0.9);
+    border: 1px solid rgba(213, 182, 98, 1);
     border-radius: 7px;
-    background: rgba(0, 86, 0, 0.65);
+    background: rgba(0, 86, 0, 1);
     padding: 0 5px 0 5px;
     margin: 0;
 }
