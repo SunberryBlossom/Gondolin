@@ -72,30 +72,56 @@
     },
 
     "mpd": {
-        "format": "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-        "unknown-tag": "N/A",
-        "interval": 5,
+        // [MPD CONNECTION]
+        // "server": "PUT THE UNIX SOCKET FILE REPRESENTATION FOR MPD HERE",
+        "interval": 3, // if not connected to MPD, how often should the module retry to connect
+        "timeout": 10, // how many seconds before a connection attempt times out
+
+        // [FORMAT AND DISPLAY]
+        "playing_interval": 1000, // milliseconds updating state of module
+
+
+        "unknown-tag": "Unknown",
+        "format": "{consumeIcon} {randomIcon}{repeatIcon} {singleIcon} | {stateIcon} {title} | {elapsedTime:%M:%S}-{totalTime:%M:%S}",
+        "format-stopped": "{consumeIcon} {randomIcon}{repeatIcon} {singleIcon}",
+        "format-paused": "{consumeIcon} {randomIcon}{repeatIcon} {singleIcon} | {stateIcon} {title} | {elapsedTime:%M:%S}-{totalTime:%M:%S}",
+        "format-disconnected": "Not connected to MPD",
+
+        // [ICONS]
+        "state-icons": {
+            "playing": "󱖑",
+            "paused": "󱖒"
+        },
         "consume-icons": {
-            "on": " "
+            "on": "<span color=\"#D5B662\"></span>",
+            "off": ""
         },
         "random-icons": {
-            "off": "<span color=\"#f53c3c\"></span> ",
-            "on": " "
+            "on": "<span color=\"#D5B662\"> </span>",
+            "off": " "
         },
         "repeat-icons": {
-            "on": " "
+            "on": "<span color=\"#D5B662\">󰑖</span>",
+            "off": "󰑖"
         },
         "single-icons": {
-            "on": "1 "
+            "on": "<span color=\"#D5B662\">󰑘</span>",
+            "off": "󰑘"
         },
-        "state-icons": {
-            "paused": "",
-            "playing": ""
-        },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+
+        // [MIN-MAX VALUES]
+        "artist-len": 10,
+        "album-len": 10,
+        "title-len": 10,
+        "ellipsis": "...",
+
+        // [TOOLTIP FORMATTING]
+        "tooltip": true,
+        "tooltip-format": "Artist: {artist} | Album: {album}",
+        "tooltip-format-disconnected": "Cannot connect to MPD server..."
+
+        // [ON MOUSE INTERACTION]
+        // I am currently not really using the mouse so much, therefore it is not configured.
     },
 
     "idle_inhibitor": {

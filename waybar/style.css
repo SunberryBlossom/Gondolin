@@ -1,12 +1,11 @@
 * {
     font-family: FiraCode Nerd Font, Symbols Nerd Font, sans-serif;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 /* [BAR STYLING] */
 window#waybar {
     background-color: transparent;
-    border-bottom: transparent;
 }
 
 /* [MODULE GROUP STYLING] */
@@ -15,9 +14,10 @@ window#waybar {
 .modules-center {} */
 
 .modules-right {
-    border: 1px solid rgba(213, 182, 98, 1);
+    border: 1.5px solid rgba(213, 182, 98, 1);
+    background: rgba(0, 86, 0, 0.4);
     border-radius: 7px;
-    background: rgba(0, 86, 0, 1);
+    padding: 3px 10px;
 }
 
 #cavaGLSL,
@@ -36,17 +36,11 @@ window#waybar {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#power-profiles-daemon,
-#mpd {
-    padding: 3px 10px;
+#power-profiles-daemon {
     color: rgba(254, 253, 250, 1);
-    border-radius: 7px;
-    background: transparent;
+    padding: 0px 5px;
 }
 
-#mpd {
-        background: rgba(0, 86, 0, 1);
-}
 
 /* needed button settings to remove weird hover on workspace buttons */
 button:hover {
@@ -58,9 +52,9 @@ button:hover {
 
 /* [WORKSPACES MODULE] */
 #workspaces {
-    border: 1px solid rgba(213, 182, 98, 1);
     border-radius: 7px;
-    background: rgba(0, 86, 0, 1);
+    background: rgba(0, 86, 0, 0.4);
+    border: 1.5px solid rgba(213, 182, 98, 1);
     padding: 0 5px 0 5px;
     margin: 0;
 }
@@ -72,7 +66,7 @@ button:hover {
 }
 
 #workspaces button:hover {
-    color: rgba(213, 182, 98, 0.9);
+    color: rgba(213, 182, 98, 1);
     box-shadow: inherit;
     text-shadow: inherit;
 }
@@ -86,3 +80,25 @@ button:hover {
 }
 
 /* #workspaces button.hidden {} */
+
+/* [MPD MODULE] */
+#mpd {
+    background: rgba(0, 86, 0, 0.4);
+    border-radius: 7px;
+    border: 2px solid rgba(213, 182, 98, 1);
+    color: rgba(254, 253, 250, 1);
+    padding: 0 10px;
+}
+
+/* #mpd.disconnected {} */
+
+#mpd.stopped {
+    border-width: 0.5px;
+    color: rgba(254, 253, 250, 0.5)
+}
+
+/* #mpd.playing {} */
+
+#mpd.paused {
+    border-width: 1px;
+}
